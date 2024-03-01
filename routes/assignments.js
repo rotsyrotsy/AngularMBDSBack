@@ -35,7 +35,6 @@ function getAssignments(req, res){
 // Récupérer un assignment par son id (GET)
 function getAssignment(req, res){
     let assignmentId = req.params.id;
-    
     Assignment.findById(assignmentId, (err, assignment) =>{
         if(err){res.send(err)}
         res.json(assignment);
